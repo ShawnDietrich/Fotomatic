@@ -47,10 +47,12 @@ header .content {
   display: flex;
   align-items: center;
   padding: 1.875rem;
+  height: 25px;
 }
 
 header .logo {
   flex: 1;
+
 }
 
 header nav ul {
@@ -59,6 +61,7 @@ header nav ul {
 
 nav li {
   padding-left: 3.5rem;
+  list-style-type: none;
 }
 
 nav a {
@@ -66,7 +69,13 @@ nav a {
   line-height: 1.6;
   font-size: 1rem;
   color: #4a4a4a;
+  text-decoration: none;
+
 }
+.content a{
+  text-decoration: none;
+}
+
 
 header .icon {
   width: 1rem;
@@ -89,6 +98,7 @@ header .mobile {
 
   header .content {
     padding: .5rem 0;
+    
   }
 
   header .mobile ul {
@@ -96,6 +106,7 @@ header .mobile {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    
   }
 
   header .mobile li {
@@ -117,6 +128,10 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  background-image: url('../images/banner-landingpage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #sign-up-cta {
@@ -124,6 +139,7 @@ header .mobile {
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  margin: 100px 170px;
 }
 
 #sign-up-cta .content {
@@ -212,21 +228,28 @@ header .mobile {
 #features-section {
   display: flex;
   justify-content: space-between;
-  padding: 4rem 5%;
+  padding: 64px 5% 46px 5%;
   background-color: #f3f3f3;
 }
 
 .feature {
   flex: 1;
-  padding: 2rem;
+  padding: 2rem 0px;
   margin: 0px 1.25rem;
   background-color: white;
+  overflow: hidden;
+
 }
 
 .feature .image-container {
   width: 90%;
   height: 65%;
   margin: 0 auto;
+  max-width: 100%;
+  display: block;  
+}
+.feature .image-container img{
+  width: 100%;
 }
 
 .feature h2 {
@@ -296,6 +319,11 @@ header .mobile {
 #filters-section .images-container {
   max-width: 100%;
   padding: 0 1%;
+  display: flex;
+}
+
+#filters-section .image-container img{
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -332,22 +360,24 @@ header .mobile {
 
 #quotes-section {
   background-color: #f3f3f3;
+  padding: 80px 30px;
 }
 
 #quotes-section content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
   line-height: 1.1;
   font-style: italic;
   color: #4a4a4a;
+  
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
@@ -356,12 +386,12 @@ header .mobile {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
